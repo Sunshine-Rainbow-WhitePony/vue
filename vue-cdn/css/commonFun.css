@@ -172,6 +172,8 @@ body {
 }
 .center .menu .level2 {
   border: 1px solid #f1f1f1;
+  transition: height 1s;
+  overflow: hidden;
 }
 .center .menu .item {
   font-size: 12px;
@@ -182,16 +184,11 @@ body {
   background: #f7fcf6;
   cursor: pointer;
 }
-.center .menu .slide-enter-active {
-  animation: slide-down 0.5s;
+.center .menu .slideDown {
+  height: 200px;
 }
-@keyframes slide-down {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: auto;
-  }
+.center .menu .slideUp {
+  height: 0!important;
 }
 .center .animate .content {
   font-size: 14px;

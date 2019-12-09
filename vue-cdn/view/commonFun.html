@@ -67,7 +67,7 @@
 		</div>
 
 		<!-- 涉及组件嵌套,父子之间通信知识 -->
-		<p class="title">折叠板</p>
+		<p class="title">折叠板--涉及组件嵌套</p>
 		<div class="menu">
 			<Panel v-for="item in menuData" :name="item.name" @flag="isShow" :key="item.id">
 				<div class="level2" v-show="panelShow">
@@ -78,6 +78,7 @@
 		
 		<p class="title">折叠板</p>
 		<div class="menu">
+			<!--paneldata这个名称不能含大写-->
 			<Panel2 :paneldata="menuData"></Panel2>
 		</div>
 

@@ -13,7 +13,7 @@ Vue.component("Panel", {
 		}
 	},
 	mounted() {
-//		console.log(name);
+
 	},
 	methods: {
 		ifshow: function() {
@@ -39,10 +39,12 @@ Vue.component("Panel2", {
 		paneldata: Array
 	},
 	template: `<div>
-					<div v-for="item in paneldata">
-						<div class="panel" :key="item.id">{{item.name}}</div>
-						<div class="level2" v-for="e in item.data">
-							<div class="item">{{ e.value }}</div>
+					<div v-for="(item,index) in paneldata">
+						<div class="panel" :key="index" @click="item.isShow = !item.isShow">{{item.name}}</div>
+						<div class="level2" :class="{slideUp: !item.isShow}" :style="{height: item.data.length*40 + 'px'}">
+							<div v-for="e in item.data">
+								<div class="item">{{ e.value }}</div>
+							</div>
 						</div>
 				   </div>
 			   </div>`,
@@ -51,12 +53,6 @@ Vue.component("Panel2", {
 			flag: false
 		}
 	},
-	mounted() {
-//		console.log(panelData);
-	},
-	methods: {
-		
-	}
 });
 
 var myVue = new Vue({
@@ -89,6 +85,7 @@ var myVue = new Vue({
 		menuData: [{
 				id: 1,
 				name: "一级面板",
+				isShow: false,
 				data: [{
 						href: "",
 						value: "周九良"
@@ -114,26 +111,19 @@ var myVue = new Vue({
 			{
 				id: 2,
 				name: "一级面板",
+				isShow: false,
 				data: [{
 						href: "",
-						value: "周九良"
+						value: "张九龄"
 					},
 					{
 						href: "",
-						value: "周九良"
+						value: "张九龄"
 					},
 					{
 						href: "",
-						value: "周九良"
+						value: "张九龄"
 					},
-					{
-						href: "",
-						value: "周九良"
-					},
-					{
-						href: "",
-						value: "周九良"
-					}
 				]
 			}
 		],

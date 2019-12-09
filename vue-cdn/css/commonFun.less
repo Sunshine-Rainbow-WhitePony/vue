@@ -186,6 +186,8 @@ body {
         }
         .level2 {
             border: 1px solid #f1f1f1;
+            transition: height 1s;
+            overflow: hidden;
         }
         .item {
             font-size: 12px;
@@ -196,16 +198,11 @@ body {
                 cursor: pointer;
             }
         }
-        .slide-enter-active {
-            animation: slide-down .5s;
+        .slideDown {
+            height: 200px;
         }
-        @keyframes slide-down {
-            0% {
-                height: 0;
-            }
-            100% {
-                height: auto;
-            }
+        .slideUp {
+            height: 0!important;
         }
     }
     //动画效果
