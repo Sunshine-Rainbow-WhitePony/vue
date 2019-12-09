@@ -1,0 +1,222 @@
+body {
+  min-height: calc(100vh);
+  background: #dfeadc;
+}
+.center {
+  width: 1200px;
+  min-height: calc(100vh);
+  margin: 0 auto;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  padding: 0 20px;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: hidden;
+}
+.center .title {
+  margin: 40px 0;
+  text-indent: 10px;
+  font-size: 16px;
+  border-left: 4px solid #2b8614;
+  font-weight: bold;
+}
+.center .btn {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #85c175;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 4px;
+}
+.center .btn:hover {
+  cursor: pointer;
+  background: #97d088;
+}
+.center .tab-menu ul {
+  overflow: hidden;
+}
+.center .tab-menu li {
+  float: left;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #85c175;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  margin-right: 10px;
+  color: #85c175;
+  cursor: pointer;
+}
+.center .tab-menu li.active {
+  background: #85c175;
+  color: #fff;
+}
+.center .tab-con {
+  width: 400px;
+  height: 200px;
+  border: 1px solid #85c175;
+  border-radius: 0 10px 10px 10px;
+  text-align: center;
+  line-height: 200px;
+  font-size: 18px;
+  color: #85c175;
+  font-weight: bold;
+}
+.center .switch {
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+  background: #bbbdbf;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.center .switch::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.center .switch.select {
+  background: #85c175;
+}
+.center .switch.select:after {
+  left: unset;
+  right: 2px;
+}
+.center .selection {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+}
+.center .selection input {
+  height: 36px;
+  width: 200px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  text-indent: 10px;
+  cursor: pointer;
+}
+.center .selection .icon-opt {
+  width: 16px;
+  height: 16px;
+  display: block;
+  background: url(../img/icon-jiantou.png) no-repeat;
+  background-size: 16px 16px;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  transition: All 0.4s;
+}
+.center .selection .icon-opt.active {
+  transform: rotate(180deg);
+}
+.center .selection ul {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+}
+.center .selection ul li {
+  line-height: 36px;
+  padding: 0 10px;
+  color: #999;
+}
+.center .selection ul li:hover {
+  background: #edf3eb;
+  cursor: pointer;
+  color: #333;
+}
+.center .table-area {
+  width: 500px;
+}
+.center .table-area table thead th {
+  border: 1px solid #dfe2e5;
+  height: 40px;
+  font-size: 14px;
+}
+.center .table-area table tbody tr:nth-child(even) {
+  background: #f7fcf6;
+}
+.center .table-area table tbody tr td {
+  border: 1px solid #dfe2e5;
+  height: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+.center .table-area table tbody tr td .delete {
+  cursor: pointer;
+  color: #2b8614;
+}
+.center .menu {
+  width: 200px;
+  font-size: 16px;
+}
+.center .menu .panel {
+  height: 40px;
+  text-indent: 10px;
+  line-height: 40px;
+  color: #fff;
+  background: #85c175;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.center .menu .level2 {
+  border: 1px solid #f1f1f1;
+}
+.center .menu .item {
+  font-size: 12px;
+  text-indent: 20px;
+  line-height: 40px;
+}
+.center .menu .item:hover {
+  background: #f7fcf6;
+  cursor: pointer;
+}
+.center .menu .slide-enter-active {
+  animation: slide-down 0.5s;
+}
+@keyframes slide-down {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: auto;
+  }
+}
+.center .animate .content {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 2px;
+  color: #2B8614;
+  height: 21px;
+}
+.center .animate .content p {
+  display: inline-block;
+}
+.center .animate .content .bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.center .animate .content .bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
