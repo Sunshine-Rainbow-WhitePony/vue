@@ -1,6 +1,6 @@
 body {
   min-height: calc(100vh);
-  background: #dfeadc;
+  background: #dfeadc14;
 }
 .center {
   width: 1200px;
@@ -16,13 +16,13 @@ body {
   margin: 40px 0;
   text-indent: 10px;
   font-size: 16px;
-  border-left: 4px solid #2b8614;
+  border-left: 4px solid #dfeadc;
   font-weight: bold;
 }
 .center .btn {
   display: inline-block;
   padding: 4px 10px;
-  background: #85c175;
+  background: #dfeadc;
   color: #fff;
   font-size: 14px;
   text-align: center;
@@ -42,26 +42,26 @@ body {
   line-height: 40px;
   text-align: center;
   font-size: 16px;
-  border: 1px solid #85c175;
+  border: 1px solid #dfeadc;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
   margin-right: 10px;
-  color: #85c175;
+  color: #dfeadc;
   cursor: pointer;
 }
 .center .tab-menu li.active {
-  background: #85c175;
+  background: #dfeadc;
   color: #fff;
 }
 .center .tab-con {
   width: 400px;
   height: 200px;
-  border: 1px solid #85c175;
+  border: 1px solid #dfeadc;
   border-radius: 0 10px 10px 10px;
   text-align: center;
   line-height: 200px;
   font-size: 18px;
-  color: #85c175;
+  color: #dfeadc;
   font-weight: bold;
 }
 .center .switch {
@@ -86,7 +86,7 @@ body {
   left: 2px;
 }
 .center .switch.select {
-  background: #85c175;
+  background: #dfeadc;
 }
 .center .switch.select:after {
   left: unset;
@@ -155,7 +155,7 @@ body {
 }
 .center .table-area table tbody tr td .delete {
   cursor: pointer;
-  color: #2b8614;
+  color: #dfeadc;
 }
 .center .menu {
   width: 200px;
@@ -166,7 +166,7 @@ body {
   text-indent: 10px;
   line-height: 40px;
   color: #fff;
-  background: #85c175;
+  background: #dfeadc;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -216,4 +216,7 @@ body {
   100% {
     transform: scale(1);
   }
+}
+.center .line-echart {
+  height: 400px;
 }

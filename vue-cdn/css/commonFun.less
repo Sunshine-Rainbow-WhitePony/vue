@@ -1,6 +1,7 @@
+@themeColor: #dfeadc;
 body {
     min-height: ~'calc(100vh)';
-    background: #dfeadc;
+    background: #dfeadc14;
 }
 
 .center {
@@ -16,13 +17,13 @@ body {
         margin: 40px 0;
         text-indent: 10px;
         font-size: 16px;
-        border-left: 4px solid #2b8614;
+        border-left: 4px solid @themeColor;
         font-weight: bold;
     }
     .btn {
         display: inline-block;
         padding: 4px 10px;
-        background: #85c175;
+        background: @themeColor;
         color: #fff;
         font-size: 14px;
         text-align: center;
@@ -44,14 +45,14 @@ body {
             line-height: 40px;
             text-align: center;
             font-size: 16px;
-            border: 1px solid #85c175;
+            border: 1px solid @themeColor;
             border-bottom: none;
             border-radius: 10px 10px 0 0;
             margin-right: 10px;
-            color: #85c175;
+            color: @themeColor;
             cursor: pointer;
             &.active {
-                background: #85c175;
+                background: @themeColor;
                 color: #fff;
             }
         }
@@ -59,12 +60,12 @@ body {
     .tab-con {
         width: 400px;
         height: 200px;
-        border: 1px solid #85c175;
+        border: 1px solid @themeColor;
         border-radius: 0 10px 10px 10px;
         text-align: center;
         line-height: 200px;
         font-size: 18px;
-        color: #85c175;
+        color: @themeColor;
         font-weight: bold;
     }
     // switch开关
@@ -89,7 +90,7 @@ body {
             left: 2px;
         }
         &.select {
-            background: #85c175;
+            background: @themeColor;
             &:after {
                 left: unset;
                 right: 2px;
@@ -164,7 +165,7 @@ body {
                         text-align: center;
                         .delete {
                             cursor: pointer;
-                            color: #2b8614;
+                            color: @themeColor;
                         }
                     }
                 }
@@ -180,7 +181,7 @@ body {
             text-indent: 10px;
             line-height: 40px;
             color: #fff;
-            background: #85c175;
+            background: @themeColor;
             border-radius: 4px;
             cursor: pointer;
         }
@@ -247,4 +248,7 @@ body {
             }
         }
     }
+	.line-echart{
+		height: 400px;
+		}
 }
