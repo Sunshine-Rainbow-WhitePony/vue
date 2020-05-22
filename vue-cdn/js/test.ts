@@ -1,3 +1,10 @@
-let someValue: any = 3;
+enum Color {Red =1, Green=3, Blue=6}
+let c: Color = Color.Red ;
 
-let strLength: number = (<string>someValue).length;
+console.log(c);
+
+
+
+
+
+
