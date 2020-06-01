@@ -15,9 +15,8 @@
 				.then(res => {
 					console.log(res)
 				}) */
-				
 				getUserInfo({pid: '2114',pageSize: 500,curPage: 1}).then(res => {
-					console.log(res)
+					console.log(res.data)
 				}).catch(err => {
 					console.log(err)
 				})
