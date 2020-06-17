@@ -1,6 +1,7 @@
 //封装axios
 import axios from 'axios'
 import { baseURL } from '@/config'
+import { getToken } from '@/lib/util'
 
 class HttpRequest {
     //构造方法
@@ -32,6 +33,7 @@ class HttpRequest {
                 // Spin.show()
             }
             this.queue.url = true //将当前请求放入queue栈中
+            config.headers['Authorization'] = getToken() //每一次请求都会获取token，并把它放在headers的Authorization字段中
             return config //把config return出去,它的请求就会继续
         }, error => {
             return Promise.reject(error);
@@ -40,8 +42,8 @@ class HttpRequest {
         //添加一个响应拦截器
         instance.interceptors.response.use(res => {
             delete this.queue.url //删掉queue栈中请求
-            const { data, status } = res
-            return { data, status }
+            const { data } = res
+            return data
         }, error => {
             delete this.queue.url //删掉queue栈中请求
             return Promise.reject(error);

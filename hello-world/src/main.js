@@ -6,7 +6,7 @@ import Bus from "./lib/bus"
 
 if (process.env.NODE_ENV === "development") { //开发环境
     Vue.config.devtools = true
-    require("./mock")
+        // require("./mock")
 } else if (process.env.NODE_ENV == 'production') { //生产环境
     Vue.config.devtools = false
 }

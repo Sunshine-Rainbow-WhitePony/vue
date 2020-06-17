@@ -69,7 +69,7 @@ export default [
         meta: { //元信息
             title: "登录页"
         },
-        //特定页的独享首位
+        //特定页的独享守卫
         beforeEnter: (to, from, next) => {
             //from是上一个页面对象
             //to是当前页面对象
@@ -85,13 +85,13 @@ export default [
         name: "agru",
         component: () =>
             import ('@/views/agru.vue'),
-        // props: {
-        // 	food: "banana"
-        // },
+        /* props: {
+        	food: "banana"
+        }, */
         //也用函数返回,({})是箭头函数返回对象的简写,相当于{ return {} }
-        props: route => ({
-            food: route.query.food
-        })
+        props: route => {
+            console.log(route)
+        }
     },
     {
         path: '/child',
@@ -107,7 +107,7 @@ export default [
     },
     {
         path: '/email',
-        name: 'email',
+        // name: 'email',
         component: () =>
             import ('@/views/email.vue')
     },

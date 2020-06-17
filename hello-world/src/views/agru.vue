@@ -9,7 +9,7 @@ export default {
 	props: {
 		food: {
 			type: String,
-			// default: "lison"
+			default: "lison"
 		}
 	},
 	//这个方法是在渲染该组件对应路由被确认前调用

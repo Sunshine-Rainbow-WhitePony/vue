@@ -2,11 +2,14 @@
 	<div>
 		我是home
 		<button @click="getInfo">请求数据</button>
+        <button @click='handleLogout'>退出登录</button>
+		<button @click='goPage'>跳转页面</button>
 	</div>
 </template>
 
 <script>
-	import { getUserInfo } from '@/api/user.js'
+    import { getUserInfo } from '@/api/user.js'
+    import { mapActions } from 'vuex'
 	
 	export default {
 		methods:{
@@ -20,6 +23,14 @@
 				}).catch(err => {
 					console.log(err)
 				})
+            },
+            ...mapActions('user',['logout']),
+            handleLogout(){
+                this.logout()
+                this.$router.push({name: 'login'})
+            },
+			goPage(){
+				this.$router.push({name: 'email',params: {userId: 123}})
 			}
 		}
 	}

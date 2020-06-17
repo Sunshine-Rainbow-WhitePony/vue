@@ -13,6 +13,7 @@
 		},
 		mounted (){
 			console.log(this.$bus);
+			console.log(this.$route.params.userId);
 		}
 	}
 </script>

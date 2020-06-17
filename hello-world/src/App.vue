@@ -61,13 +61,13 @@
 		},
 		data() {
 			return {
-				routerTransition: '',
+				// routerTransition: '',
 			}
 		},
-		watch:{
+		/* watch:{
 			'$route' (to) {
 				to.query && to.query.transitionName && (this.routerTransition = to.query.transitionName)
 			}
-		}
+		} */
 	}
 </script>

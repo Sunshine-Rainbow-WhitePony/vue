@@ -12,25 +12,6 @@ Vue.component("Panel", {
 			flag: false
 		}
 	},
-	beforeCreate() {
-		console.log("1:"+this.flag);
-		console.log(this.$root.tabFlag);
-	},
-	created() {
-		console.log("2:"+this.flag);
-	},
-	beforeMount() {
-		console.log("3:"+this.flag);
-	},
-	mounted() {
-		console.log("4:"+this.flag);
-	},
-	beforeUpdate() {
-		console.log("5:"+this.flag);
-	},
-	updated() {
-		console.log("6:"+this.flag);
-	},
 	methods: {
 		ifshow: function() {
 			this.flag = !this.flag;
@@ -207,6 +188,15 @@ var myVue = new Vue({
 			},
 		],
 		currentView: 'tem1'
+	},
+	created(){
+		console.log(this.$el)
+	},
+	beforeMount(){
+		console.log(this.$el)
+	},
+	mounted(){
+		console.log(this.$el)
 	},
 	methods: {
 		isShow: function(item) {
