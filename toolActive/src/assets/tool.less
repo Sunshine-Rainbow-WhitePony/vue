@@ -1,0 +1,113 @@
+//------------------------公用样式------------------------
+//多余显示...
+.ellipsis(@width) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: @width;
+}
+
+//圆
+.cir(@val) {
+    width: @val;
+    height: @val;
+    border-radius: 50%;
+}
+
+//absolute垂直居中
+.vertical-centering() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//absolute水平居中
+.center-horizontally() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+//垂直水平居中
+.hor-ver-center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//文本
+.text(@s, @fw, @c) {
+    font-size: @s;
+    font-weight: @fw;
+    color: @c;
+}
+
+//四方形
+.square(@w, @h, @r, @bg) {
+    width: @w;
+    height: @h;
+    border-radius: @r;
+    background: @bg;
+}
+
+//按钮
+.button(@w, @h, @r, @bg) {
+    .square(@w, @h, @r, @bg);
+    text-align: center;
+    line-height: @h;
+    cursor: pointer;
+}
+
+.icon(@w, @h, @url, @s) {
+    width: @w;
+    height: @h;
+    display: inline-block;
+    background:~'url(../images/@{url}.png) no-repeat';
+    background-size: @s;
+}
+
+
+//------------------------常见样式------------------------
+//搜索框
+.search-input(@w, @h, @radius, @bg, @imgW, @imgH, @plaColor) {
+    width: @w;
+    height: @h;
+    border-radius: @radius;
+    background: @bg;
+
+    img {
+        width: @imgW;
+        height: @imgH;
+        float: left;
+        margin-left: 12px;
+        margin-top: calc((@h - @imgH)/2);
+    }
+
+    input {
+        float: left;
+        width: calc(@w - 24px - @imgW);
+        height: @h;
+        border: none;
+        background: transparent;
+        text-indent: 8px;
+
+        &::placeholder {
+            color: @plaColor;
+        }
+    }
+}
+
+//高亮底边线
+.bottomLine(@w, @h, @bg) {
+    &:after {
+        content: "";
+        width: @w;
+        height: @h;
+        background: @bg;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
