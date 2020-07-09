@@ -16,8 +16,10 @@
         "extract-css": "^1.5.5",
         "less-loader": "^6.1.0",
         "postcss": "^7.0.32",
+        "qrcodejs2": "0.0.2",
         "vant": "^2.8.5",
         "vue": "^2.6.11",
+        "vue-qart": "^2.2.0",
         "vue-router": "^3.3.2"
     },
     "devDependencies": {

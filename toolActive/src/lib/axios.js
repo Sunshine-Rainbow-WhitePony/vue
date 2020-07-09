@@ -21,14 +21,12 @@ class HttpRequest {
 
     //拦截器
     interceptors(instance) {
-
         instance.interceptors.request.use(config => {
             return config
         }, error => {
             return Promise.reject(error);
         })
 
-        //添加一个响应拦截器
         instance.interceptors.response.use(res => {
             const { data } = res
             return data

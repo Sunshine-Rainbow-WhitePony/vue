@@ -26,17 +26,17 @@ module.exports = {
                 };
             })
 
-        /* config.plugin('extract-css').tap(args => [{
+        config.plugin('extract-css').tap(args => [{
             filename: `css/gedeTool.[name].css`,
             chunkFilename: `css/gedeTool.[name].css`
-        }]) */
+        }])
     },
     //打包时不生成map文件
     productionSourceMap: false,
     devServer: {
         proxy: 'https://xyhd.chaoxing.com',
     },
-    // publicPath: '../',
+    publicPath: '../',
     indexPath: 'views/gedeToolIndex.html',
     filenameHashing: false,
     configureWebpack: {
