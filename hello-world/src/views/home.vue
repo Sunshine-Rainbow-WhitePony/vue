@@ -18,6 +18,7 @@
 				.then(res => {
 					console.log(res)
 				}) */
+				//这里调用axios封装，实际就是axios.create()，返回的是一个promise
 				getUserInfo({pid: '2114',pageSize: 500,curPage: 1}).then(res => {
 					console.log(res.data)
 				}).catch(err => {

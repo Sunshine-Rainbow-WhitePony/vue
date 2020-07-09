@@ -27,12 +27,6 @@ export default [
     	]
     },
     {
-    	//命名路由
-    	path: '/text3',
-    	name: "text3",
-    	component: () => import('@/views/text3.vue'),
-    },
-    {
     	//重定向
     	path: '/main',
     	redirect: to => {
@@ -43,6 +37,13 @@ export default [
     		}
     	}
     }, */
+    {
+        //命名路由
+        path: '/text3',
+        name: "text3",
+        component: () =>
+            import ('@/views/text3.vue'),
+    },
     {
         //命名视图
         path: '/name_view',

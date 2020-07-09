@@ -11,7 +11,7 @@
 		<button @click="handleChangeUserName">修改userName</button>
 		<button @click="registerModule">动态注册模块</button>
 		<p v-for="(li,index) in todoList" key= "index">{{ li }}</p> -->
-		<!-- <p>appName: {{ appName }}</p> -->
+		<p>appName: {{ appName }}</p>
 		<button @click="handleChangeAppName">修改appName</button>
 	</div>
 </template>
@@ -45,7 +45,7 @@
 			}),
 			
 			...mapState({
-				// appName: state => state.appName,
+				appName: state => state.appName,
 				appVersion: state => state.appVersion,
 				todoList: state => state.todo ? state.todo.todoList : [],
 				// stateValue: state => state.stateValue,
@@ -78,11 +78,11 @@
 			},
 			...mapMutations(['SET_APP_NAME','SET_STATE_VALUE']),
 			...mapMutations('user',['SET_USER_NAME']),
-			...mapActions(['updateAppName']),
+			// ...mapActions(['updateAppName']),
 			handleChangeAppName() {
 				// this.appName = "newName";//会报错，因为appName是计算属性，默认有getter方法，当访问这个属性时调用，但是没有setter方法，想改变它的值就要定义setter方法
-				this.$store.commit('SET_APP_NAME','newName');//第一个参数是个方法，是通过这个方法来修改值，定义在mutation.js中
-				console.log(this.$store.state.appName);
+				// this.$store.commit('SET_APP_NAME','newName');//第一个参数是个方法，是通过这个方法来修改值，定义在mutation.js中
+				// console.log(this.$store.state.appName);
 				/* this.$store.commit({
 					type: 'SET_APP_NAME',
 					appName: 'newName'
@@ -93,7 +93,7 @@
 				}); */
 				// this.$store.commit('SET_APP_VERSION');
 				// this.updateAppName()
-				// this.$store.dispatch('updateAppName')
+				this.$store.dispatch('updateAppName')
 			},
 			handleChangeUserName(){
 				this.SET_USER_NAME('vue-cource');

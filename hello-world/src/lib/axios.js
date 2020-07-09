@@ -25,8 +25,7 @@ class HttpRequest {
     interceptors(instance) {
         //添加一个请求拦截器
         instance.interceptors.request.use(config => {
-            //添加全局的loading……
-
+            //这里可以添加请求前的控制,比如添加全局的loading……
             //Spin是iview组件的loading,这个组件有个遮罩层,这里调用显示之后,页面是无法点击的
             //这里判断queue栈中是否还有请求,如果没有,则这次请求时,让Spin组件显示,如果有,Spin已经显示了,不需再次执行显示
             if (!Object.keys(this.queue).length) {
@@ -35,7 +34,7 @@ class HttpRequest {
             this.queue.url = true //将当前请求放入queue栈中
             config.headers['Authorization'] = getToken() //每一次请求都会获取token，并把它放在headers的Authorization字段中
             return config //把config return出去,它的请求就会继续
-        }, error => {
+        }, error => {//当请求出现错误的时候
             return Promise.reject(error);
         })
 
