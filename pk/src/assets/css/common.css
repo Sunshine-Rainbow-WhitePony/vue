@@ -1,0 +1,347 @@
+.con {
+  background: #f8f9fa;
+  height: 100%;
+  overflow: hidden;
+}
+.con .top-tab {
+  border-bottom: 1px solid rgba(25, 59, 104, 0.06);
+  margin: 32px 32px 0;
+}
+.con .top-tab ul {
+  overflow: hidden;
+}
+.con .top-tab ul li {
+  float: left;
+  width: 128px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.con .top-tab ul li .flag {
+  background: url(../images/grade-bg.png) no-repeat;
+  background-size: 100%;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
+  line-height: 16px;
+  text-align: center;
+}
+.con .top-tab ul li .flag i {
+  display: block;
+  color: #fff;
+  font-size: 10px;
+  transform: scale(0.6);
+}
+.con .top-tab ul li span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #193b68;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+.con .top-tab ul li.active {
+  border-bottom: 3px solid #1479ff;
+}
+.con .top-tab ul li.active .flag {
+  background: url(../images/grade-bg-a.png) no-repeat;
+}
+.con .con-top {
+  padding: 32px 32px 16px;
+  position: relative;
+}
+.con .con-top .btns:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.con .con-top .btns .btn {
+  width: 108px;
+  height: 40px;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px 0px rgba(25, 59, 104, 0.04);
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #193b68;
+  float: left;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.con .con-top .btns .btn img,
+.con .con-top .btns .btn span {
+  vertical-align: middle;
+}
+.con .con-top .btns .btn:hover {
+  background: rgba(25, 59, 104, 0.04);
+}
+.con .con-top .btns .btn:active {
+  background: rgba(25, 59, 104, 0.06);
+}
+.con .con-top .btns .select {
+  background: rgba(25, 59, 104, 0.06);
+  box-shadow: unset;
+  position: relative;
+  width: 122px;
+  text-align: left;
+}
+.con .con-top .btns .select .checkbox,
+.con .con-top .btns .select .edge {
+  width: 16px;
+  height: 16px;
+  background: url(../images/checkbox.png) no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.con .con-top .btns .select .select-show .edge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: url(../images/select-down.png) no-repeat;
+}
+.con .con-top .btns .select .select-show span {
+  margin-left: 8px;
+}
+.con .con-top .btns .select .select-list {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  height: 216px;
+  background: #ffffff;
+  box-shadow: 0px 8px 24px 0px rgba(25, 59, 104, 0.08);
+  border-radius: 4px;
+  z-index: 9;
+}
+.con .con-top .btns .select .select-list .list-con {
+  margin-top: 8px;
+  overflow: hidden;
+}
+.con .con-top .btns .select .select-list .checkbox {
+  margin-left: 16px;
+}
+.con .con-top .btns .select .select-list ul {
+  float: left;
+  width: 122px;
+  border-right: 1px solid rgba(25, 59, 104, 0.06);
+}
+.con .con-top .btns .select .select-list ul:last-child {
+  border-right: none;
+}
+.con .con-top .btns .select .select-list ul li {
+  line-height: 32px;
+}
+.con .con-top .btns .select .select-list ul li span {
+  margin-left: 5px;
+  font-size: 14px;
+  color: rgba(25, 59, 104, 0.6);
+}
+.con .con-top .btns .select .select-list ul li:hover {
+  background: rgba(25, 59, 104, 0.06);
+}
+.con .con-top .btns .select .select-list ul li:hover .checkbox {
+  border-radius: 4px;
+  border: 2px solid #1479ff;
+  background: unset;
+  box-sizing: border-box;
+}
+.con .con-top .btns .select .select-list ul li:hover span {
+  color: #193b68;
+}
+.con .con-top .btns .select .select-list ul li.active {
+  background: rgba(25, 59, 104, 0.06);
+}
+.con .con-top .btns .select .select-list ul li.active .checkbox {
+  background: url(../images/checkbox-a.png) no-repeat;
+  border: none;
+}
+.con .con-top .btns .select .select-list ul li.active span {
+  color: #193b68;
+}
+.con .con-top .btns .select .select-list .select-all {
+  line-height: 32px;
+  padding-top: 3px;
+  padding-bottom: 8px;
+  font-size: 0;
+  border-top: 1px solid rgba(25, 59, 104, 0.06);
+}
+.con .con-top .btns .select .select-list .select-all span {
+  margin-left: 16px;
+  font-size: 14px;
+  color: #193b68;
+}
+.con .con-top .btns .select .select-list .select-all.active .checkbox {
+  background: url(../images/checkbox-a.png) no-repeat;
+  border: none;
+}
+.con .con-top .btns .select .select-list .select-all.active span {
+  color: #193b68;
+}
+.con .con-top .btns .select.active .edge {
+  background: url(../images/select-up.png) no-repeat;
+}
+.con .con-top .btns .select.active .select-list {
+  display: block;
+}
+.con .con-top .page {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  line-height: 40px;
+}
+.con .con-top .page .text1 {
+  float: left;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(25, 59, 104, 0.4);
+}
+.con .con-top .page .text1 i {
+  color: rgba(25, 59, 104, 0.8);
+}
+.con .con-top .page .toggle-page {
+  float: left;
+  margin-left: 18px;
+}
+.con .con-top .page .toggle-page i {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.con .con-top .page .toggle-page .prev {
+  margin-right: 20px;
+  background: url(../images/page-prev.png) center no-repeat;
+}
+.con .con-top .page .toggle-page .prev.active {
+  background: url(../images/page-prev-a.png) center no-repeat;
+}
+.con .con-top .page .toggle-page .prev.active:hover {
+  background: rgba(25, 59, 104, 0.04) url(../images/page-prev-a.png) center no-repeat;
+}
+.con .con-top .page .toggle-page .prev.active:active {
+  background: rgba(25, 59, 104, 0.06) url(../images/page-prev-a.png) center no-repeat;
+}
+.con .con-top .page .toggle-page .next {
+  margin-right: 10px;
+  background: url(../images/page-next.png) center no-repeat;
+}
+.con .con-top .page .toggle-page .next.active {
+  background: url(../images/page-next-a.png) center no-repeat;
+}
+.con .con-top .page .toggle-page .next.active:hover {
+  background: rgba(25, 59, 104, 0.04) url(../images/page-next-a.png) center no-repeat;
+}
+.con .con-top .page .toggle-page .next.active:active {
+  background: rgba(25, 59, 104, 0.06) url(../images/page-next-a.png) center no-repeat;
+}
+.con .table-area {
+  padding: 0 32px 58px;
+}
+.con .table-area table {
+  border-collapse: separate;
+  border-spacing: 0px 4px;
+}
+.con .table-area thead tr {
+  height: 40px;
+  background: rgba(25, 59, 104, 0.03);
+  border-radius: 4px;
+}
+.con .table-area thead tr th {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(25, 59, 104, 0.59);
+}
+.con .table-area tbody tr {
+  height: 48px;
+  border-radius: 4px;
+}
+.con .table-area tbody tr td {
+  text-align: center;
+  border-top: 1px solid rgba(25, 59, 104, 0.06);
+  border-bottom: 1px solid rgba(25, 59, 104, 0.06);
+  position: relative;
+  font-size: 14px;
+  font-weight: 900;
+  color: #193b68;
+}
+.con .table-area tbody tr td:first-child {
+  border-left: 1px solid rgba(25, 59, 104, 0.06);
+  color: rgba(25, 59, 104, 0.29);
+}
+.con .table-area tbody tr td:last-child {
+  border-right: 1px solid rgba(25, 59, 104, 0.06);
+}
+.con .table-area tbody tr td .opt {
+  display: none;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+.con .table-area tbody tr td .opt .edit,
+.con .table-area tbody tr td .opt .delete {
+  float: left;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  cursor: pointer;
+}
+.con .table-area tbody tr td .opt .edit img,
+.con .table-area tbody tr td .opt .delete img {
+  width: 16px;
+  height: 16px;
+  margin-top: 8px;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.con .table-area tbody tr td .opt .edit .tip,
+.con .table-area tbody tr td .opt .delete .tip {
+  display: none;
+  position: absolute;
+  bottom: -27px;
+  left: -4px;
+  width: 40px;
+  height: 27px;
+  background: url(../images/shape.png);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 32px;
+}
+.con .table-area tbody tr td .opt .edit:hover,
+.con .table-area tbody tr td .opt .delete:hover {
+  background: rgba(25, 59, 104, 0.04);
+  border-radius: 4px;
+}
+.con .table-area tbody tr td .opt .edit:hover img,
+.con .table-area tbody tr td .opt .delete:hover img {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  -o-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.con .table-area tbody tr td .opt .edit:hover .tip,
+.con .table-area tbody tr td .opt .delete:hover .tip {
+  display: block;
+}
+.con .table-area tbody tr:hover {
+  background: #ffffff;
+  box-shadow: 0px 24px 48px 0px rgba(25, 59, 104, 0.12), 0px 0px 8px 0px rgba(25, 59, 104, 0.04);
+}
+.con .table-area tbody tr:hover td .opt {
+  display: block;
+}
+.con .table-area tbody tr:hover td:first-child {
+  color: #193b68;
+}

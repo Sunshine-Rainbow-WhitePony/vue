@@ -1,0 +1,212 @@
+.con {
+	background: rgba(248, 249, 250, 1);
+	height: 100%;
+	overflow: hidden;
+	.top-tab {
+		border-bottom: 1px solid rgba(25, 59, 104, 0.06);
+		margin: 32px 32px 0;
+		ul {
+			overflow: hidden;
+			li {
+				float: left;
+				width: 128px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 0;
+                cursor: pointer;
+                text-align: left;
+				.flag {
+					background: url(../images/grade-bg.png) no-repeat;
+					background-size: 100%;
+					width: 18px;
+					height: 18px;
+					display: inline-block;
+					margin-left: 15px;
+					vertical-align: middle;
+					line-height: 16px;
+					text-align: center;
+					i {
+						display: block;
+						color: #fff;
+						font-size: 10px;
+						transform: scale(0.6);
+					}
+				}
+				span {
+					font-size: 14px;
+					font-weight: 600;
+					color: rgba(25, 59, 104, 1);
+					margin-left: 15px;
+					vertical-align: middle;
+				}
+
+				&.active {
+					border-bottom: 3px solid rgba(20, 121, 255, 1);
+					.flag {
+						background: url(../images/grade-bg-a.png) no-repeat;
+					}
+				}
+			}
+		}
+	}
+	.con-top {
+		padding: 32px 32px 16px;
+		position: relative;
+		.btns {
+			&:after {
+				content: '';
+				clear: both;
+				display: block;
+			}
+			.btn {
+				width: 108px;
+				height: 40px;
+				background: rgba(255, 255, 255, 1);
+				box-shadow: 0px 2px 8px 0px rgba(25, 59, 104, 0.04);
+				border-radius: 4px;
+				line-height: 40px;
+				text-align: center;
+				font-size: 14px;
+				font-weight: 400;
+				color: rgba(25, 59, 104, 1);
+				float: left;
+				margin-right: 12px;
+				cursor: pointer;
+				img,
+				span {
+					vertical-align: middle;
+				}
+				&:hover {
+					background: rgba(25, 59, 104, 0.04);
+				}
+				&:active {
+					background: rgba(25, 59, 104, 0.06);
+				}
+			}
+
+			.select {
+				background: rgba(25, 59, 104, 0.06);
+				box-shadow: unset;
+				position: relative;
+				width: 122px;
+				text-align: left;
+				.checkbox,
+				.edge {
+					width: 16px;
+					height: 16px;
+					background: url(../images/checkbox.png) no-repeat;
+					display: inline-block;
+					vertical-align: middle;
+				}
+				.select-show {
+					.edge {
+						position: absolute;
+						top: 12px;
+						right: 12px;
+						background: url(../images/select-down.png) no-repeat;
+					}
+					span {
+						margin-left: 8px;
+					}
+				}
+
+				.select-list {
+					display: none;
+					position: absolute;
+					top: 45px;
+					left: 0;
+					height: 216px;
+					background: rgba(255, 255, 255, 1);
+					box-shadow: 0px 8px 24px 0px rgba(25, 59, 104, 0.08);
+					border-radius: 4px;
+					z-index: 9;
+					.list-con {
+						margin-top: 8px;
+						overflow: hidden;
+					}
+					.checkbox {
+						margin-left: 16px;
+					}
+					ul {
+						float: left;
+						width: 122px;
+						border-right: 1px solid rgba(25, 59, 104, 0.06);
+						&:last-child {
+							border-right: none;
+						}
+						li {
+							line-height: 32px;
+							span {
+								margin-left: 5px;
+								font-size: 14px;
+								color: rgba(25, 59, 104, 0.6);
+							}
+							&:hover {
+								background: rgba(25, 59, 104, 0.06);
+								.checkbox {
+									border-radius: 4px;
+									border: 2px solid rgba(20, 121, 255, 1);
+									background: unset;
+									box-sizing: border-box;
+								}
+								span {
+									color: rgba(25, 59, 104, 1);
+								}
+							}
+							&.active {
+								background: rgba(25, 59, 104, 0.06);
+
+								.checkbox {
+									background: url(../images/checkbox-a.png) no-repeat;
+									border: none;
+								}
+								span {
+									color: rgba(25, 59, 104, 1);
+								}
+							}
+						}
+					}
+					.select-all {
+						line-height: 32px;
+						padding-top: 3px;
+						padding-bottom: 8px;
+						font-size: 0;
+						border-top: 1px solid rgba(25, 59, 104, 0.06);
+						span {
+							margin-left: 16px;
+							font-size: 14px;
+							color: rgba(25, 59, 104, 1);
+						}
+						&.active {
+							.checkbox {
+								background: url(../images/checkbox-a.png) no-repeat;
+								border: none;
+							}
+							span {
+								color: rgba(25, 59, 104, 1);
+							}
+						}
+					}
+				}
+
+				&.active {
+					.edge {
+						background: url(../images/select-up.png) no-repeat;
+					}
+					.select-list {
+						display: block;
+					}
+				}
+			}
+		}
+        
+        .page-box{
+            position: absolute;
+            right: 32px;
+            top: 32px;
+            line-height: 40px; 
+        }
+	}
+
+	
+}

@@ -1,0 +1,204 @@
+@charset "UTF-8";
+body,
+form,
+textarea,
+select,
+option,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dt,
+dd,
+menu,
+blockquote,
+fieldset,
+label,
+i,
+em,
+header,
+footer,
+section,
+legend,
+button,
+input,
+hr,
+pre,
+div,
+input,
+span,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+body {
+    font: 12px/1.5 "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    color: #333;
+    overflow: hidden;
+}
+
+li {
+    list-style-type: none;
+}
+
+input,
+select,
+textarea {
+    color: #333;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    border: 0px;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+b {
+    font-weight: normal;
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 0px;
+}
+
+input[type="button"]:hover {
+    cursor: pointer;
+}
+
+.clearfix:after {
+    content: '';
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    display: block;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+
+.scrollbar::-webkit-scrollbar {
+    width: 5px;
+    /*对应的是垂直滚动条的宽度*/
+    height: 5px;
+    /*对应的是水平滚动条的高度*/
+    background-color: #f5f5f5;
+}
+
+
+/*定义滚动条的轨道，内阴影及圆角*/
+
+.scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+
+/*定义滑块，内阴影及圆角*/
+
+.scrollbar::-webkit-scrollbar-thumb {
+    /*width: 10px;*/
+    height: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+}
+
+
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+
+.lightScrollbar::-webkit-scrollbar {
+    width: 5px;
+    /*对应的是垂直滚动条的宽度*/
+    height: 5px;
+    /*对应的是水平滚动条的高度*/
+    background-color: #fff;
+}
+
+
+/*定义滚动条的轨道，内阴影及圆角*/
+
+.lightScrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+
+/*定义滑块，内阴影及圆角*/
+
+.lightScrollbar::-webkit-scrollbar-thumb {
+    /*width: 10px;*/
+    height: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #D9DDE1;
+}
+
+
+/* @font-face {font-family: "iconfont";
+  src: url('../font/iconfont.eot?t=1534321823582');
+  src: url('../font/iconfont.eot?t=1534321823582#iefix') format('embedded-opentype'),
+  url('../font/iconfont.ttf?t=1534321823582') format('truetype'), 
+  url('../font/iconfont.svg?t=1534321823582#iconfont') format('svg'); 
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-guanliyuan:before { content: "\e600"; }
+
+.icon-home:before { content: "\e618"; }
+
+.icon-fl-renshi:before { content: "\e62c"; }
+
+.icon-menu2:before { content: "\e609"; } */
