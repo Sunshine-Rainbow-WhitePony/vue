@@ -1,8 +1,8 @@
 import axios from './index'
 
-export const getUserInfo = (data) => {
+export const getInfo = (data) => {
     return axios.request({
-        url: '/schedule/subject/getData',
+        url: '/getInfo',
         method: 'post',
         data: data
     })
@@ -13,14 +13,23 @@ export const login = ({ userName, password }) => {
         url: '/login',
         method: 'post',
         data: {
-            userNumber: userName,
-            passWord: password
+            userName,
+            password
         }
     })
 }
 
 export const authorization = () => {
     return axios.request({
-        url
+        url:'/authorization',
+		method: 'get'
     })
+}
+
+export const getAllUser = (data) => {
+	return axios.request({
+		url: '/user/getAllUser',
+		method: 'post',
+		data: data
+	})
 }

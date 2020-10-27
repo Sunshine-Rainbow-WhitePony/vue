@@ -9,24 +9,19 @@ Vue.use(Router);
 const router = new Router({
     //定义路由跳转的模式,默认值是"hash",模拟页面跳转,就是地址栏有个＃号,在#号后边做路由的跳转,页面是不会刷新的,
     //history,使用history的一些api做无刷新页面跳转,需要后端配合,当地址栏的页面没有时,不是显示404,而是跳转到指定页面
-    mode: "history",
+    mode: "hash",
     routes
 })
-
-/* 判断登录状态,做跳转限制 */
-const HAS_LOGINED = true; //登录状态,true为已登录
 
 //用beforEach,是跳转之前执行
 //to是要去的页面对象,form是当前页面对象,next是函数
 router.beforeEach((to, from, next) => {
     //页面的title显示对应路由的meta:{title: ""}的内容
-   /* to.meta && setTitle(to.meta.title);
-
+    to.meta && setTitle(to.meta.title);
     const token = getToken()
-
     if (token) {
-        store.dispatch('authorization', token).then(() => {
-            if (to.name === 'login') next({ name: 'home' })
+        store.dispatch('user/authorization', token).then(() => {
+            if (to.name === 'login') next({ name: 'data' })
             else next()
         }).catch(() => {
             setToken('')
@@ -34,8 +29,9 @@ router.beforeEach((to, from, next) => {
         })
     } else { //没登录过
         if (to.name === 'login') next()
-        else next({ name: 'login' })
-    } */
+            // else next({ name: 'login' })
+        else next()
+    }
 
 
 
@@ -54,7 +50,6 @@ router.beforeEach((to, from, next) => {
         if (HAS_LOGINED) next({ name: "home" })
         else next()
     } */
-	next();
 })
 
 //也是一个全局首位,

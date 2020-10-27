@@ -26,7 +26,7 @@ export default {
             }).then(()=>{
                 //$router.push是跳转，里面传入命名路由
                 this.$router.push({
-                    name: 'home'
+                    name: 'data'
                 })
             }).catch(error => {
                 console.log(error)

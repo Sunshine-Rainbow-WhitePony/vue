@@ -53,7 +53,7 @@ class HttpRequest {
         const instance = axios.create() //创建一个axios实例
         options = Object.assign(this.getInsideConfig(), options) //把两个对象合并成一个对象,如果两个对象有相同的属性,那么后边的对象的属性值覆盖前边对象的属性值
         this.interceptors(instance)
-            // options.url = this.baseUrl + options.url
+        options.url = this.baseUrl + options.url
         return instance(options) //返回实例
     }
 }

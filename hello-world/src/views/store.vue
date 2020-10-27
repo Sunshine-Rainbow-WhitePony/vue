@@ -13,6 +13,7 @@
 		<p v-for="(li,index) in todoList" key= "index">{{ li }}</p> -->
 		<p>appName: {{ appName }}</p>
 		<button @click="handleChangeAppName">修改appName</button>
+		<button @click="gettu">appName</button>
 	</div>
 </template>
 
@@ -93,8 +94,16 @@
 				}); */
 				// this.$store.commit('SET_APP_VERSION');
 				// this.updateAppName()
-				this.$store.dispatch('updateAppName')
-			},
+                this.$store.dispatch('updateAppName')
+                /* setTimeout(() => {
+                    this.$store.state.appName = "jikk";
+                }, 1000); */
+                
+                console.log(this.appName);
+            },
+            gettu(){
+                console.log(this.appName);
+            },
 			handleChangeUserName(){
 				this.SET_USER_NAME('vue-cource');
 			},

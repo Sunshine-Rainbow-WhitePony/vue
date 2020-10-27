@@ -13,24 +13,17 @@
                 </a-submenu>
             </a-submenu>
         </a-menu> -->
-        <a-menu>
-            <template v-for="(item,index) in list">
-                <a-menu-item v-if="!item.child" :key="item.index">{{ item.title }}</a-menu-item>
-                <re-submenu v-else :parent="item" :key="`menu_item_${index}`"></re-submenu>
-            </template> 
-        </a-menu>
+        <a-menu :menudata="list"></a-menu>
     </div>
 </template>
 <script>
-import menuComponent from "_c/menu";
-import ReSubmenu from "./re-submenu"
+import AMenu from "_c/menu/a-menu";
 
 export default {
     name: "menu_page",
     components: {
         //...拆分操作符，可以把menuComponent的属性拆分出来，扁平化的放到components对象里
-        ...menuComponent,
-        ReSubmenu
+        AMenu
     },
     data() {
         return {

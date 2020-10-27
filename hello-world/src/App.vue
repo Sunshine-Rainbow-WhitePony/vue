@@ -5,6 +5,7 @@
 			<router-link to="/home">home</router-link>
 			<router-link to="/agru">agru</router-link>
 			<router-link to="/child">child</router-link>
+			<router-link to="/ttrr">ttrr</router-link>
 		</div>
 		<!-- <transition-group name="router">
 			<router-view key="default"/>

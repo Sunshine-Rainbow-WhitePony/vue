@@ -11,7 +11,7 @@ module.exports = {
             .set("_c", resolve("src/components"))
 
 
-        config.module
+        /* config.module
             .rule('images')
             .use('url-loader')
             .tap(options => {
@@ -29,20 +29,20 @@ module.exports = {
         config.plugin('extract-css').tap(args => [{
             filename: `css/gedeTool.[name].css`,
             chunkFilename: `css/gedeTool.[name].css`
-        }])
+        }]) */
     },
     //打包时不生成map文件
     productionSourceMap: false,
-    devServer: {
+    /* devServer: {
         proxy: 'https://xyhd.chaoxing.com',
-    },
-    publicPath: '../',
-    indexPath: 'views/gedeToolIndex.html',
-    filenameHashing: false,
-    configureWebpack: {
+    }, */
+    publicPath: './',
+    // indexPath: 'views/gedeToolIndex.html',
+    // filenameHashing: false,
+    /* configureWebpack: {
         output: {
             filename: `js/gedeTool.[name].js`,
             chunkFilename: `js/gedeTool.[name].js`
         },
-    },
+    }, */
 }

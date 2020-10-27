@@ -39,7 +39,7 @@ export default [
     }, */
     {
         //命名路由
-        path: '/text3',
+        path: '/userPage/:name',
         name: "text3",
         component: () =>
             import ('@/views/text3.vue'),
@@ -74,8 +74,8 @@ export default [
         beforeEnter: (to, from, next) => {
             //from是上一个页面对象
             //to是当前页面对象
-            console.log(from.name);
-            console.log(to.name);
+            /* console.log(from.name);
+            console.log(to.name); */
             //next必须调用,否则页面无法成功跳转
             next();
         }
@@ -141,6 +141,12 @@ export default [
         name: 'render_page',
         component: () =>
             import ('@/views/render_page.vue')
+    },
+    {
+        path: '/data',
+        name: 'data',
+        component: () =>
+            import ('@/views/data.vue')
     },
     /* {
     	//对应router/index.js文件中配置的mode: "history"模式,当地址栏的地址找不到的时候,跳转到child.vue(一般是自己写的404页面)
