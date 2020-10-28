@@ -3,7 +3,8 @@
 >说明：项目由vue-cli3搭建
 
 #### 涉及知识点：
-###### 1.[vue-router](http://note.youdao.com/noteshare?id=2789b70b850a56358cec079762e83ab7&sub=FA50B242E1C74F0C95A96E23B8DD6EE4)、[vue-router进阶]（http://note.youdao.com/noteshare?id=b55eeced89ecb5f389cde0edef48b6fb&sub=F84F52608D3E40A488FB010CFF44BA9D）
+###### 1.[vue-router](http://note.youdao.com/noteshare?id=2789b70b850a56358cec079762e83ab7&sub=FA50B242E1C74F0C95A96E23B8DD6EE4)
+[vue-router进阶]（http://note.youdao.com/noteshare?id=b55eeced89ecb5f389cde0edef48b6fb&sub=F84F52608D3E40A488FB010CFF44BA9D）
 - 路由配置
 - 动态路由
 - 嵌套路由
