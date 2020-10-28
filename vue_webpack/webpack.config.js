@@ -1,5 +1,5 @@
 const path = require("path");
-//vue-loader版本式v15的话，加一个plugins
+//vue-loader版本是v15的话，加一个plugins
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 //html插件
 const HTMLPlugin = require("html-webpack-plugin");
