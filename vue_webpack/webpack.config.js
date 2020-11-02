@@ -12,6 +12,7 @@ const CssExtractPlugin = require("mini-css-extract-plugin");
 const isDev = process.env.NODE_ENV === "development"
 
 const config = {
+    mode: process.env.NODE_ENV || "production",
     //指定项目的运行环境是web平台
     target: "web",
     //entry设置入口文件
@@ -33,7 +34,6 @@ const config = {
             }
         })
     ],
-    // mode: 'development',
     module: {
         //rules配置规则
         rules: [{
@@ -96,13 +96,13 @@ if (isDev) { //开发环境
     }
     config.plugins.push(
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
+        // new webpack.NoEmitOnErrorsPlugin()
     )
 } else { //生产环境
     config.mode = 'production';
     config.entry = {
         app: path.join(__dirname, 'src/index.js'),
-        vendor: ['vue'],
+        // vendor: ['vue'],
     }
     config.output.filename = '[name].[chunkhash:8].js';
     //生产环境下分离css
@@ -133,9 +133,10 @@ if (isDev) { //开发环境
     );
 
     //这里配置比较复杂，还没搞清楚
-    /* config.optimization = {
+    config.optimization = {
         splitChunks: {
-            cacheGroups: { // 这里开始设置缓存的 chunks
+            chunks: 'all',
+            /* cacheGroups: { // 这里开始设置缓存的 chunks
                 commons: {
                     chunks: 'initial', // 必须三选一： "initial" | "all" | "async"(默认就是异步)
                     minSize: 0, // 最小尺寸，默认0,
@@ -149,10 +150,10 @@ if (isDev) { //开发环境
                     priority: 10, // 缓存组优先级
                     enforce: true
                 }
-            }
+            } */
         },
         runtimeChunk: true
-    } */
+    }
 }
 
 module.exports = config
