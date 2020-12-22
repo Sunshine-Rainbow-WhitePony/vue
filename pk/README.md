@@ -1,21 +1,5 @@
-# pk-basic
-
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 排课系统
+#### 涉及知识点
+- table组件封装，难点：可自定义单元格内容，用render和函数式组件实现
+- popup弹出层组件封装 难点：父子组件间数据双向绑定，父子组件间通信
+- page分页组件封装
